@@ -106,13 +106,6 @@ The NSS pin is driven manually (`digitalWrite`) rather than delegated to the SPI
 peripheral, which is standard practice for LR11xx devices because NSS must remain
 stable across the BUSY polling window.
 
-### Power Decoupling
-
-A **100 µF electrolytic capacitor** is placed across the 3.3V and GND rails on
-the breadboard at the LR1120 power pins. The LR1120 draws approximately 100 mA
-peak during LoRa TX. Without decoupling, the current spike can cause the ESP32-S3
-onboard 3.3V LDO to momentarily sag, resetting the chip mid-transmission.
-
 ---
 
 ## 4. LR1120 SPI Bring-Up — The MISO Problem
